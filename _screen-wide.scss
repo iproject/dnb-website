@@ -1,0 +1,19 @@
+#home {
+  &-header {
+    height: 10vh;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+  }
+
+  &-showcase {
+    height: 100vh;
+    width: 100%;
+    background: $gradient-primary-bg;
+    background: $gradient-primary-webkit;
+    background: $gradient-primary;
+    padding-top: 10vh;
+  }
+}

@@ -1,0 +1,67 @@
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  line-height: 1.5;
+  font-family: $font-primary;
+  overflow-x: hidden;
+  background: $page-bg;
+  color: $dark;
+
+  // Page scrollbar
+  &::-webkit {
+    /* width */
+    &-scrollbar {
+      width: 10px;
+      padding: 2px;
+    }
+
+    /* Track */
+    &-scrollbar-track {
+      background: $light;
+    }
+
+    /* Handle */
+    &-scrollbar-thumb {
+      background: $dark-light;
+    }
+
+    /* Handle on hover */
+    &-scrollbar-thumb:hover {
+      background: #555;
+    }
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  // font-family: "Montserrat", sans-serif;
+  font-family: $font-secondary;
+  line-height: 1.5rem;
+  color: $dark;
+}
+
+a {
+  text-decoration: none;
+  color: $dark;
+  font-family: $font-primary;
+}
+
+img {
+  width: 100%;
+}
+
+main {
+  background: transparent;
+}
+
+ul {
+  list-style-type: none;
+}

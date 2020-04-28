@@ -1,0 +1,42 @@
+// Imports
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:wght@300;400;700;800&display=swap");
+
+// Colors
+$primary: #007acc;
+$primary-light: #66c2ff;
+$primary-dark: #002e4d;
+$secondary: #29dabe;
+$secondary-light: #0be6c8;
+$secondary-dark: #089986;
+$white: #ffffff;
+$light: #f1f1f1;
+$medium: #bfbfbf;
+$black: #0d0d0d;
+$dark: #262626;
+$dark-light: #737373;
+$page-bg: #eeeeee;
+
+// Fonts
+$font-primary: "Open Sans", sans-serif;
+$font-secondary: "Bree Serif", serif;
+
+// Others
+// $ws-page-width: 1400px;
+// $hamburger-menu-speed: 0.75s;
+
+$gradient-primary: linear-gradient(
+  270deg,
+  #005bb4 0%,
+  #1488cc 50%,
+  #66c2ff 100%
+);
+$gradient-primary-webkit: -webkit-linear-gradient(
+  270deg,
+  #005bb4 0%,
+  #1488cc 50%,
+  #66c2ff 100%
+);
+$gradient-primary-bg: #1488cc;
+$gradient-secondary: linear-gradient(to left, #185a9d, #43cea2);
+$gradient-secondary-webkit: -webkit-linear-gradient(to left, #185a9d, #43cea2);
+$gradient-secondary-bg: #43cea2;
