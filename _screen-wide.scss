@@ -1,15 +1,156 @@
 #home {
-  &-header {
+  &-nav {
+    width: 40px;
     height: 10vh;
+    position: fixed;
+    top: 0;
+    right: 5vh;
+    display: flex;
+    align-items: flex-end;
+    z-index: 2;
+
+    .nav-wrapper {
+      width: 100%;
+      width: 40px;
+      height: 40px;
+      height: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      position: relative;
+    }
+
+    #toggler {
+      width: 40px;
+      height: 40px;
+      position: absolute;
+      bottom: 0;
+      z-index: 3;
+      opacity: 0;
+
+      &:checked {
+        & + .icons {
+          transform-origin: 50% 50%;
+          transform: rotate(360deg);
+          transition: 1s;
+
+          #close {
+            display: block;
+          }
+
+          #hamburger {
+            display: none;
+          }
+        }
+
+        & ~ .menu {
+          right: -20px;
+        }
+
+        &:hover {
+          & + .icons #close {
+            transform: rotate(45deg);
+          }
+        }
+      }
+    }
+
+    .icons {
+      position: absolute;
+      bottom: 0;
+      height: 40px;
+      width: 40px;
+      transition: 0.5s;
+      z-index: 2;
+      // display: none;
+
+      &-wrapper {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        svg {
+          width: 30px;
+          height: 30px;
+
+          path {
+            fill: $light;
+          }
+
+          &#close {
+            display: none;
+            transition: 0.45s ease-out;
+          }
+        }
+      }
+    }
+
+    ul.menu {
+      display: flex;
+      flex-direction: column;
+      background: $dark;
+      position: absolute;
+      top: 0px;
+      right: -280px;
+      padding: 15vh 40px 30px 0;
+      border-radius: 0 0 15px 15px;
+      transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
+      z-index: 1;
+
+      li {
+        margin-right: 2rem;
+
+        a {
+          color: $light;
+          letter-spacing: 2px;
+          display: inline-block;
+          padding: 0.75rem 1.5rem;
+          font-weight: 500;
+          transition: 0.5s;
+          white-space: nowrap;
+
+          &:hover {
+            color: $primary-light;
+          }
+        }
+      }
+    }
+  }
+
+  &-header {
     width: 100%;
     position: absolute;
     top: 0;
     left: 0;
-    background-color: transparent;
+    z-index: 1;
+
+    .wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      height: 100%;
+      padding: 2.5vh 5vh;
+
+      .logo {
+        width: 10vh;
+        height: 10vh;
+        border-radius: 100%;
+        overflow: hidden;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
   }
 
   &-showcase {
-    height: 100vh;
+    height: 150vh;
     width: 100%;
     background: $gradient-primary-bg;
     background: $gradient-primary-webkit;

@@ -7,6 +7,7 @@
 body {
   line-height: 1.5;
   font-family: $font-primary;
+  font-weight: 300;
   overflow-x: hidden;
   background: $page-bg;
   color: $dark;
@@ -52,6 +53,7 @@ a {
   text-decoration: none;
   color: $dark;
   font-family: $font-primary;
+  font-weight: 300;
 }
 
 img {

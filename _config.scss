@@ -1,5 +1,5 @@
 // Imports
-@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Open+Sans:wght@300;400;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bree+Serif&family=Fira+Sans:wght@300;500;600;700;900&display=swap");
 
 // Colors
 $primary: #007acc;
@@ -17,11 +17,11 @@ $dark-light: #737373;
 $page-bg: #eeeeee;
 
 // Fonts
-$font-primary: "Open Sans", sans-serif;
+$font-primary: "Fira Sans", sans-serif;
 $font-secondary: "Bree Serif", serif;
 
 // Others
-// $ws-page-width: 1400px;
+$page-width: 1300px;
 // $hamburger-menu-speed: 0.75s;
 
 $gradient-primary: linear-gradient(
