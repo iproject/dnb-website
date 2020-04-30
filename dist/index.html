@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/main.css" />
     <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+    <link
+      rel="stylesheet"
+      href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css"
+    />
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css" />
     <title>Digital Notice Board | Welcome</title>
   </head>
   <body>
@@ -28,12 +34,12 @@
           <div class="icons">
             <div class="icons-wrapper">
               <svg
+                id="hamburger"
                 width="24"
                 height="24"
                 viewBox="0 0 24 24"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
-                id="hamburger"
               >
                 <g>
                   <path
@@ -43,12 +49,12 @@
                   />
                   <path
                     id="bottom"
-                    d="M1 20C0 20 0 21.0602 0 22.0192C0 22.9782 0 23.9808 1 23.9808L23 23.9808C24 23.9808 24 23.0384 24 22.0192C24 21 24 20 23 20H1Z"
+                    d="M1 18C0 18 0 19.0602 0 20.0192C0 20.9782 0 21.9808 1 21.9808L23 21.9808C24 21.9808 24 21.0384 24 20.0192C24 19 24 18 23 18H1Z"
                     fill="black"
                   />
                   <path
                     id="top"
-                    d="M1 0C0 3.9821e-06 0 1.06017 0 2.01919C0 2.97821 0 3.98081 1 3.98081L23 3.98082C24 3.98082 24 3.03838 24 2.01919C24 1 24 0 23 0H1Z"
+                    d="M1 2C0 2 0 3.06017 0 4.01919C0 4.97821 0 5.98081 1 5.98081L23 5.98082C24 5.98082 24 5.03838 24 4.01919C24 3 24 2 23 2H1Z"
                     fill="black"
                   />
                 </g>
@@ -64,12 +70,12 @@
                 <g>
                   <path
                     id="back-slash"
-                    d="M3.76227 0.937856C2.88543 0.0610303 2.13578 0.810683 1.45765 1.48881C0.779528 2.16694 0.0705777 2.87589 0.947407 3.75272L20.2376 23.043C21.1145 23.9198 21.7809 23.2534 22.5015 22.5327C23.2222 21.812 23.9293 21.1049 23.0525 20.2281L3.76227 0.937856Z"
+                    d="M5.20435 2.37993C4.45862 1.6342 3.70896 2.38385 3.03084 3.06198C2.35271 3.7401 1.64376 4.44905 2.38949 5.19478L18.7956 21.6009C19.5413 22.3466 20.2077 21.6802 20.9284 20.9595C21.6491 20.2389 22.3562 19.5318 21.6105 18.786L5.20435 2.37993Z"
                     fill="black"
                   />
                   <path
                     id="forward-slash"
-                    d="M0.962442 20.2131C0.0869779 21.0886 0.836631 21.8382 1.51476 22.5164C2.19288 23.1945 2.90183 23.9034 3.7773 23.028L23.0376 3.76771C23.913 2.89224 23.2466 2.22584 22.526 1.50516C21.8053 0.784484 21.0982 0.0773772 20.2227 0.952844L0.962442 20.2131Z"
+                    d="M2.40105 18.7745C1.65637 19.5192 2.40603 20.2688 3.08415 20.9469C3.76228 21.6251 4.47123 22.334 5.21591 21.5893L21.5989 5.20635C22.3436 4.46166 21.6772 3.79526 20.9565 3.07459C20.2358 2.35391 19.5287 1.6468 18.784 2.39148L2.40105 18.7745Z"
                     fill="black"
                   />
                 </g>
@@ -79,6 +85,7 @@
           <ul class="menu">
             <li><a href="#">Home</a></li>
             <li><a href="#">Features</a></li>
+            <li><a href="#">Design</a></li>
             <li><a href="#">How It Works</a></li>
             <li><a href="#">Testimonials</a></li>
             <li><a href="#">More Apps</a></li>
@@ -132,30 +139,44 @@
         </div>
       </section>
 
-      <section id="home-features">
+      <section id="home-features" class="py-4">
         <div class="container">
-          <h1 class="section-heading">Key Features</h1>
+          <h1 class="section-title">Key Features</h1>
           <div class="items">
             <div class="item">
               <!-- icon -->
               <div class="item-icon">
-                <svg
-                  height="374pt"
-                  viewBox="-41 0 374 374.10622"
-                  width="374pt"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    d="m287.664062 75.746094-140.605468-74.921875c-2.085938-1.113281-4.585938-1.097657-6.65625.039062l-136.714844 74.921875c-2.242188 1.230469-3.6328125 3.582032-3.6328125 6.140625v97.867188c.0820315 80.449219 47.7460935 153.230469 121.4570315 185.460937l18.976562 8.269532c1.773438.773437 3.792969.777343 5.570313.007812l21.382812-9.234375c75.078125-31.53125 123.921875-105.015625 123.929688-186.445313v-95.925781c0-2.585937-1.425782-4.964843-3.707032-6.179687zm-10.292968 102.105468c-.015625 75.816407-45.503906 144.226563-115.410156 173.566407l-.046876.023437-18.621093 8.039063-16.179688-7.058594c-68.613281-30-112.984375-97.742187-113.0625-172.628906v-93.722657l129.761719-71.117187 133.558594 71.167969zm0 0"
-                  />
-                  <path
-                    d="m92.167969 175.253906c-2.511719-2.941406-6.929688-3.289062-9.871094-.777344-2.941406 2.507813-3.289063 6.929688-.777344 9.867188l36.976563 43.300781c2.46875 2.890625 6.792968 3.285157 9.738281.886719l86.117187-70.0625c3-2.4375 3.453126-6.847656 1.011719-9.847656-2.4375-2.996094-6.847656-3.453125-9.847656-1.011719l-80.8125 65.742187zm0 0"
-                  />
-                </svg>
+                <i class="las la-calendar la-5x"></i>
               </div>
-              <div class="item-heading">
-                SECURE DATA
+              <h3 class="item-title">
+                Timely Schedules
+              </h3>
+              <div class="item-body">
+                Transfer all information with the help of SSL - a solution
+                allowing you to save any data from the public eye.
               </div>
+            </div>
+            <div class="item">
+              <!-- icon -->
+              <div class="item-icon">
+                <i class="las la-bullhorn la-5x"></i>
+              </div>
+              <h3 class="item-title">
+                Announcements
+              </h3>
+              <div class="item-body">
+                Transfer all information with the help of SSL - a solution
+                allowing you to save any data from the public eye.
+              </div>
+            </div>
+            <div class="item">
+              <!-- icon -->
+              <div class="item-icon">
+                <i class="las la-book la-5x"></i>
+              </div>
+              <h3 class="item-title">
+                Books And Resources
+              </h3>
               <div class="item-body">
                 Transfer all information with the help of SSL - a solution
                 allowing you to save any data from the public eye.
@@ -164,9 +185,175 @@
           </div>
         </div>
       </section>
+
+      <section id="home-design" class="py-4">
+        <div class="container">
+          <div class="content-l">
+            <h1 class="section-title">
+              Greate device compatibility
+            </h1>
+            <p class="lead">
+              Due to the responsive design and Retina ready technology built in
+              our app, you can launch it on any devices or modern gadgets.
+            </p>
+            <div class="btn">
+              <a href="#">
+                <div class="text">
+                  <p>Download for free</p>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="content-r">
+            <img
+              src="assets/img/design.png"
+              alt="Digital notice board software on phone"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="home-how-it-works" class="py-4">
+        <div class="container">
+          <h1 class="section-title">How it works</h1>
+          <div class="slideshow"></div>
+        </div>
+      </section>
+
+      <section id="home-testimonials" class="py-4">
+        <div class="container">
+          <h1 class="section-title">What our users say</h1>
+          <div class="testimonials">
+            <!-- Swiper -->
+            <div class="swiper-container">
+              <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                  <div class="content content-1">
+                    <div class="head">
+                      <h4 class="user-name">Burning Messiah</h4>
+                      <div class="source">
+                        <a
+                          href="https://play.google.com/store/apps/details?id=com.i_project.dnb&reviewId=gp%3AAOqpTOGHG-g4Zk7bCbRqN_WcOv9ofz6LRfoBGkyjyhbPOatI9rDKBiHg9f3iMmRbmh3TX1asi7oISJbrPkmQ_s8"
+                          target="_blank"
+                          title="View Testimonial Post"
+                        >
+                          <svg
+                            width="24"
+                            height="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                          >
+                            <path
+                              d="M1.571 23.664l10.531-10.501 3.712 3.701-12.519 6.941c-.476.264-1.059.26-1.532-.011l-.192-.13zm9.469-11.56l-10.04 10.011v-20.022l10.04 10.011zm6.274-4.137l4.905 2.719c.482.268.781.77.781 1.314s-.299 1.046-.781 1.314l-5.039 2.793-4.015-4.003 4.149-4.137zm-15.854-7.534c.09-.087.191-.163.303-.227.473-.271 1.056-.275 1.532-.011l12.653 7.015-3.846 3.835-10.642-10.612z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <p class="message">
+                      <span class="quote">"</span>
+                      Wow, it's really an amazing app, digitizing my time table
+                      is like a dream come true. The app also very user
+                      friendly. Cudos to the makers
+                      <span class="quote">"</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="content content-1">
+                    <div class="head">
+                      <h4 class="user-name">Sarah Williams</h4>
+                      <div class="source">
+                        <a
+                          href="https://play.google.com/store/apps/details?id=com.i_project.dnb&reviewId=gp%3AAOqpTOH1_fN4I7owP5-vmz2klgbH7DJCj2ENxNeW_1hP9DlsnbIPw3FFPE91kiF9XAOpTbelJtwdcOxvWHagLWQ"
+                          target="_blank"
+                          title="View Testimonial Post"
+                        >
+                          <svg
+                            width="24"
+                            height="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                          >
+                            <path
+                              d="M1.571 23.664l10.531-10.501 3.712 3.701-12.519 6.941c-.476.264-1.059.26-1.532-.011l-.192-.13zm9.469-11.56l-10.04 10.011v-20.022l10.04 10.011zm6.274-4.137l4.905 2.719c.482.268.781.77.781 1.314s-.299 1.046-.781 1.314l-5.039 2.793-4.015-4.003 4.149-4.137zm-15.854-7.534c.09-.087.191-.163.303-.227.473-.271 1.056-.275 1.532-.011l12.653 7.015-3.846 3.835-10.642-10.612z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <p class="message">
+                      <span class="quote">"</span>
+                      This is really helpful, i love it. Thanks for creating
+                      this app.
+                      <span class="quote">"</span>
+                    </p>
+                  </div>
+                </div>
+                <div class="swiper-slide">
+                  <div class="content content-1">
+                    <div class="head">
+                      <h4 class="user-name">Master Node</h4>
+                      <div class="source">
+                        <a
+                          href="https://play.google.com/store/apps/details?id=com.i_project.dnb&reviewId=gp%3AAOqpTOH3SIHhAgwyfHfRgTENR6XHqRrrxaKF0NBQq50DgZxXgU5KqeJJ8rc3ANGGPW7DrKMSwgK8CzHgMKedFkM"
+                          target="_blank"
+                          title="View Testimonial Post"
+                        >
+                          <svg
+                            width="24"
+                            height="24"
+                            xmlns="http://www.w3.org/2000/svg"
+                            fill-rule="evenodd"
+                            clip-rule="evenodd"
+                          >
+                            <path
+                              d="M1.571 23.664l10.531-10.501 3.712 3.701-12.519 6.941c-.476.264-1.059.26-1.532-.011l-.192-.13zm9.469-11.56l-10.04 10.011v-20.022l10.04 10.011zm6.274-4.137l4.905 2.719c.482.268.781.77.781 1.314s-.299 1.046-.781 1.314l-5.039 2.793-4.015-4.003 4.149-4.137zm-15.854-7.534c.09-.087.191-.163.303-.227.473-.271 1.056-.275 1.532-.011l12.653 7.015-3.846 3.835-10.642-10.612z"
+                            />
+                          </svg>
+                        </a>
+                      </div>
+                    </div>
+                    <p class="message">
+                      <span class="quote">"</span>
+                      Nice work done. I hope u extend to other universities in
+                      Ghana.
+                      <span class="quote">"</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <!-- Add Pagination -->
+              <div class="swiper-pagination"></div>
+              <!-- Add Arrows -->
+              <div class="swiper-button-next"></div>
+              <div class="swiper-button-prev"></div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="home-more-apps" class="py-4">
+        <div class="container">
+          <h1 class="section-title">More apps</h1>
+          <p class="lead">
+            Our app portfolio covers many fields from business, fitness and
+            savings all the way to travelling and time management. Go ahead and
+            check them out maybe you will find one that fits you
+          </p>
+          <div class="items"></div>
+        </div>
+      </section>
       <main></main>
     </div>
 
+    <!-- JQuery CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.min.js"></script>
+    <!-- Swiper JS -->
+    <script src="https://unpkg.com/swiper/js/swiper.min.js"></script>
     <script src="js/typewriter.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

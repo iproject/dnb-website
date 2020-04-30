@@ -90,7 +90,7 @@
     ul.menu {
       display: flex;
       flex-direction: column;
-      background: #3a4953;
+      background: darken($color: $dark, $amount: 5);
       position: absolute;
       top: 0px;
       right: -320px;
@@ -176,16 +176,17 @@
 
         h1 {
           color: $light;
-          padding-bottom: 2.5rem;
+          padding-bottom: 1rem;
           font-size: 3.5rem;
           font-family: $font-primary;
-          line-height: 1;
+
+          &:nth-child(2) {
+            padding-bottom: 2rem;
+          }
         }
 
         .lead {
-          font-size: 1.2rem;
           margin-bottom: 2rem;
-          line-height: 1.7;
           padding-right: 10rem;
         }
 
@@ -199,9 +200,8 @@
 
             svg {
               fill: $light;
-              margin-right: 1rem;
-              height: 24px;
-              width: 24px;
+              margin-right: 1.5rem;
+              background-size: 32px;
             }
 
             .text {
@@ -231,6 +231,7 @@
         align-items: center;
         justify-content: flex-start;
         overflow: hidden;
+        padding-bottom: 2rem;
 
         img {
           max-height: 100%;
@@ -240,5 +241,225 @@
         }
       }
     }
+  }
+
+  &-features {
+    background: #374550;
+    .container {
+      padding-bottom: 4rem;
+    }
+    .items {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      grid-gap: 4rem;
+
+      .item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        text-align: center;
+
+        &-icon {
+          i {
+            padding: 1rem;
+            color: $primary;
+            background: $gradient-primary-bg;
+            background: $gradient-primary-webkit;
+            background: $gradient-primary;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+          }
+        }
+
+        &-title {
+          font-size: 1rem;
+          letter-spacing: 1.5px;
+          padding-bottom: 1rem;
+          text-transform: uppercase;
+          color: lighten($color: $medium, $amount: 10);
+        }
+
+        &-body {
+          font-weight: 500;
+          color: $medium;
+        }
+      }
+    }
+  }
+
+  &-design {
+    background: #43525d;
+
+    .container {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      grid-gap: 2rem;
+      height: 400px;
+    }
+
+    .content {
+      &-l {
+        height: 100%;
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        padding: 3rem;
+
+        .section-title {
+          // font-size: 2.5rem;
+          white-space: nowrap;
+          padding: 0;
+          padding-top: 3rem;
+          padding-bottom: 2rem;
+          text-align: start;
+        }
+
+        .lead {
+          color: $medium;
+          padding: 0 1rem;
+          padding-bottom: 1rem;
+        }
+
+        .btn {
+          padding: 0 1rem;
+          a {
+            display: inline-block;
+            padding: 0.75rem 2rem;
+            font-size: 0.95rem;
+            background: $gradient-primary-bg;
+            background: $gradient-primary-webkit;
+            background: $gradient-primary;
+            color: $light;
+            border-radius: 25px;
+          }
+        }
+      }
+
+      &-r {
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        padding-top: 5rem;
+
+        img {
+          width: 80%;
+        }
+      }
+    }
+  }
+
+  &-how-it-works {
+    background: $gradient-primary-bg;
+    background: $gradient-primary-webkit;
+    background: $gradient-primary;
+
+    .slideshow {
+      height: 70vh;
+    }
+  }
+
+  &-testimonials {
+    background: transparentize($color: $dark, $amount: 0.1);
+    position: relative;
+    padding-bottom: 8rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: $dark url("../assets/img/testimonial-bg.jpg") no-repeat center
+        center/ cover;
+      z-index: -1;
+      filter: grayscale(100%);
+    }
+
+    .testimonials {
+      height: 200px;
+
+      .swiper {
+        &-container {
+          height: 100%;
+        }
+
+        &-button-next,
+        &-button-prev {
+          color: $primary !important;
+          background-color: transparentize($color: $white, $amount: 0.8);
+          padding: 2rem 2rem;
+          border-radius: 50%;
+          background: transparentize($color: $dark, $amount: 0.5);
+          border: solid 2px $primary;
+          transition: 0.5s;
+
+          &:hover,
+          &:focus {
+            outline: none;
+            border-color: $dark;
+            color: $dark !important;
+            background: $primary;
+          }
+        }
+
+        &-pagination-bullet-active {
+          background-color: $primary;
+        }
+
+        &-slide {
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          .content {
+            width: 80%;
+            height: 100%;
+            background: #00000085;
+            border-radius: 25px;
+            overflow: hidden;
+            padding: 1rem;
+
+            .head {
+              padding: 0.25rem 2rem;
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+
+              .user-name {
+                text-transform: uppercase;
+                letter-spacing: 2px;
+                font-size: 1.2rem;
+                font-family: $font-primary;
+                color: $medium;
+              }
+
+              svg path {
+                fill: $medium;
+              }
+            }
+
+            .message {
+              padding: 1rem 3rem;
+              text-align: center;
+              color: lighten($color: $medium, $amount: 20);
+
+              .quote {
+                font-size: 1.5rem;
+                color: $primary;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &-more-apps {
+    background: $dark;
   }
 }

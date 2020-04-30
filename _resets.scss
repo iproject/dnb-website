@@ -7,10 +7,10 @@
 body {
   line-height: 1.5;
   font-family: $font-primary;
-  font-weight: 300;
+  font-weight: 400;
   overflow-x: hidden;
   background: $page-bg;
-  color: $dark;
+  color: $light;
 
   // Page scrollbar
   &::-webkit {
@@ -43,17 +43,16 @@ h3,
 h4,
 h5,
 h6 {
-  // font-family: "Montserrat", sans-serif;
   font-family: $font-secondary;
-  line-height: 1.5rem;
-  color: $dark;
+  line-height: 1;
+  color: $light;
 }
 
 a {
   text-decoration: none;
-  color: $dark;
+  color: $light;
   font-family: $font-primary;
-  font-weight: 300;
+  font-weight: 400;
 }
 
 img {

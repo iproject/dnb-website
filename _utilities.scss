@@ -4,4 +4,28 @@
   margin: auto;
 }
 
+.section-title {
+  padding: 4rem 2rem;
+  text-align: center;
+  font-size: 3rem;
+  text-transform: capitalize;
+}
 
+.lead {
+  font-size: 1.2rem;
+  font-weight: 400;
+  letter-spacing: 1.1px;
+  line-height: 1.5 !important;
+}
+
+.py {
+  &-2 {
+    padding: 2rem 0;
+  }
+  &-3 {
+    padding: 3rem 0;
+  }
+  &-4 {
+    padding: 4rem 0;
+  }
+}
