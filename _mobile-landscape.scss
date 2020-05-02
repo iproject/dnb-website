@@ -1,0 +1,172 @@
+// Tablets Landscape
+@media screen and (max-height: 1024px) {
+  #home {
+    &-showcase {
+      .showcase-content {
+        &-l {
+          grid-column: 2/8;
+          padding: 0;
+        }
+
+        &-r {
+          grid-column: 8/12;
+        }
+      }
+    }
+  }
+}
+
+// ! The rest of the code was conflicting with other styles
+// ! and thats why is commented out.
+
+//     &-more-apps {
+//       .lead {
+//         padding: 3rem 0 2rem;
+//       }
+
+//       .items {
+//         overflow: hidden;
+//         grid-template-columns: repeat(2, 1fr);
+
+//         .item {
+//           grid-template-columns: 1fr;
+//           height: auto;
+
+//           img {
+//             height: 300px;
+//           }
+
+//           &-description {
+//             text-align: center;
+//             padding: 0;
+//             padding: 2rem 1rem;
+//           }
+//         }
+//       }
+//     }
+
+//     &-contact {
+//       .container {
+//         grid-gap: 1rem;
+//         padding: 1rem 0;
+//       }
+//     }
+
+//     &-testimonials {
+//       .testimonials {
+//         grid-template-columns: repeat(3, 1fr);
+//       }
+//     }
+
+//     &-main-footer {
+//       .container {
+//         grid-gap: 0 2rem;
+//         grid-template-columns: repeat(3, auto);
+//       }
+
+//       .about-social .wrapper {
+//         flex-direction: column;
+//         .logo {
+//           width: 24%;
+//           padding: 0rem;
+//           margin: 0;
+//         }
+//       }
+
+//       .newsletter {
+//         form {
+//           input[type="submit"] {
+//             font-size: 0.7rem;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }
+
+// // Smartphones Landscape
+// @media screen and (max-height: 500px) {
+//   #home {
+//     &-showcase {
+//       .showcase-content {
+//         &-l {
+//           grid-column: 2/8;
+//           padding: 0;
+//         }
+
+//         &-r {
+//           grid-column: 8/12;
+//         }
+//       }
+//     }
+
+//     &-more-apps {
+//       .lead {
+//         padding: 3rem 0 2rem;
+//       }
+
+//       .items {
+//         overflow: hidden;
+//         grid-template-columns: repeat(2, 1fr);
+
+//         .item {
+//           grid-template-columns: 1fr;
+//           height: auto;
+
+//           img {
+//             height: 300px;
+//           }
+
+//           &-description {
+//             text-align: center;
+//             padding: 0;
+//             padding: 2rem 1rem;
+//           }
+//         }
+//       }
+//     }
+
+//     &-testimonials {
+//       .testimonials {
+//         grid-template-columns: 1fr !important;
+//       }
+//     }
+
+//     &-contact {
+//       .container {
+//         grid-gap: 1rem;
+//         padding: 1rem 0;
+//       }
+//     }
+
+//     &-testimonials {
+//       .testimonials {
+//         grid-template-columns: repeat(3, 1fr);
+//       }
+//     }
+
+//     &-main-footer {
+//       .container {
+//         grid-gap: 0 2rem;
+//         grid-template-columns: repeat(3, auto);
+//       }
+
+//       .about-social .wrapper {
+//         flex-direction: column;
+//         .logo {
+//           width: 24%;
+//           padding: 0rem;
+//           margin: 0;
+//         }
+//       }
+
+//       .newsletter {
+//         form {
+//           input[type="submit"] {
+//             font-size: 0.7rem;
+//           }
+//         }
+//       }
+//     }
+//   }
+// }

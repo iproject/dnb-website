@@ -1,0 +1,368 @@
+// Tablets
+@media screen and (max-width: "770px") {
+  #home {
+    .section-title {
+      font-size: 2rem;
+    }
+
+    &-showcase {
+      .showcase-content {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        display: flex;
+        flex-direction: column-reverse;
+
+        &-l {
+          padding: 0;
+          grid-column: 1/1;
+
+          grid-gap: 0;
+
+          .h1 {
+            h1:first-child {
+              display: none;
+              background: #000;
+            }
+          }
+
+          h1 {
+            font-size: 3rem;
+            white-space: pre-wrap;
+            padding-left: 15rem;
+          }
+
+          p.lead {
+            display: none;
+          }
+
+          .cta-btns-wrapper {
+            // padding-left: 15rem;
+            padding-bottom: 5rem;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            text-align: center;
+
+            a {
+              display: flex;
+              width: 300px;
+              align-items: center;
+              justify-content: center;
+            }
+          }
+        }
+
+        &-r {
+          grid-column: 1/1;
+
+          text-align: center;
+          justify-content: center;
+        }
+      }
+    }
+
+    &-features {
+      .items {
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 2rem;
+      }
+    }
+
+    &-design {
+      .container {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+
+      .content {
+        &-l {
+          grid-column: 1/2;
+          justify-content: center;
+          align-items: center;
+          text-align: center;
+        }
+        &-r {
+          grid-column: 1/2;
+        }
+      }
+    }
+
+    &-testimonials {
+      .testimonials {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &-more-apps {
+      .lead {
+        padding: 1rem 0 2rem;
+      }
+
+      .items {
+        overflow: hidden;
+        grid-template-columns: repeat(2, 1fr);
+
+        .item {
+          grid-template-columns: 1fr;
+          height: auto;
+
+          img {
+            height: 200px;
+          }
+
+          &-description {
+            text-align: center;
+            padding: 0;
+            padding: 2rem 1rem;
+          }
+        }
+      }
+    }
+
+    &-contact {
+      .container {
+        grid-template-columns: 1fr;
+        padding: 0;
+      }
+
+      form {
+        grid-column: 1/2;
+      }
+      .contact-info {
+        grid-column: 1/2;
+
+        .items {
+          flex-direction: row;
+
+          a {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            margin-right: 2rem;
+          }
+        }
+
+        grid-template-columns: 1fr;
+      }
+      .social {
+        display: none;
+      }
+    }
+
+    &-main-footer {
+      .container {
+        grid-template-columns: 1fr;
+        & > * {
+          border-bottom: dotted 1px lighten($color: #222c32, $amount: 10);
+          padding: 2rem 0;
+
+          li:last-child a {
+            border-bottom: none;
+          }
+        }
+      }
+      h3 {
+        text-align: center;
+      }
+
+      .about-social {
+        .wrapper {
+          flex-direction: column;
+          align-items: center;
+
+          h1 a {
+            text-align: center;
+            display: flex;
+            align-items: center;
+          }
+
+          .logo {
+            margin: 0;
+            padding-bottom: 1rem;
+
+            img {
+              margin: 0;
+            }
+          }
+
+          .social ul {
+            justify-content: center;
+          }
+        }
+      }
+
+      .useful-links {
+        padding: 1rem 0;
+        ul {
+          align-items: center;
+          justify-content: center;
+          text-align: center;
+
+          .left {
+            margin-right: 10rem;
+          }
+        }
+      }
+
+      .newsletter {
+        padding: 1rem 4rem;
+        text-align: center;
+      }
+
+      .copyright {
+        grid-column: 1/1;
+        flex-direction: column;
+
+        text-align: center;
+        padding: 1rem;
+      }
+    }
+  }
+}
+
+// Smartphones
+@media screen and (max-width: "500px") {
+  #home {
+    .section-title {
+      font-size: 2rem !important;
+    }
+
+    &-showcase {
+      .showcase-content {
+        display: grid;
+        grid-template-columns: 1fr;
+
+        display: flex;
+        flex-direction: column-reverse;
+
+        &-l {
+          h1 {
+            font-size: 2rem;
+
+            padding-left: 5rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    &-features {
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .items {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &-design {
+      .content {
+        &-l {
+          .section-title {
+            font-size: 2.5rem;
+            text-align: center;
+          }
+        }
+      }
+    }
+
+    &-testimonials {
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .testimonials {
+        grid-template-columns: 1fr !important;
+      }
+    }
+
+    &-more-apps {
+      .section-title {
+        font-size: 2.5rem;
+      }
+
+      .lead {
+        font-size: 1.2rem;
+      }
+
+      .items {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    &-contact {
+      padding: 3rem 0;
+
+      .section-title {
+        font-size: 2rem;
+      }
+
+      .contact-info {
+        h3 {
+          text-align: center;
+          padding: 0;
+        }
+
+        .items {
+          flex-direction: column;
+          justify-content: center;
+          align-items: center;
+
+          a {
+            margin-right: 0rem;
+          }
+        }
+      }
+    }
+
+    &-main-footer {
+      .container {
+        grid-template-columns: 1fr;
+        & > * {
+          border-bottom: dotted 1px lighten($color: #222c32, $amount: 10);
+          padding: 2rem 0;
+
+          li:last-child a {
+            border-bottom: none;
+          }
+        }
+      }
+      h3 {
+        text-align: center;
+      }
+
+      .about-social {
+        .wrapper {
+          .logo {
+            img {
+              margin: 0;
+              transform: scale(2);
+              margin-bottom: 1rem;
+            }
+          }
+        }
+      }
+
+      .useful-links {
+        padding: 1rem 0;
+        ul {
+          flex-direction: column-reverse;
+
+          .left {
+            margin-right: 0rem;
+          }
+        }
+      }
+
+      .newsletter {
+        form {
+          input[type="submit"] {
+            font-size: 0.5rem !important;
+          }
+        }
+      }
+    }
+  }
+}

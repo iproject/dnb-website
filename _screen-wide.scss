@@ -911,11 +911,13 @@
           img {
             margin-right: 1rem;
             max-width: 4.8rem;
+            width: 100%;
           }
         }
 
         .right-content {
           h1 {
+            text-align: left;
             a {
               letter-spacing: 4px;
               font-size: 1.5rem;
