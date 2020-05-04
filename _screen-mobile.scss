@@ -20,9 +20,19 @@
           grid-gap: 0;
 
           .h1 {
+            display: none;
             h1:first-child {
               display: none;
               background: #000;
+              white-space: nowrap;
+            }
+
+            h1 {
+              padding-left: 1rem;
+              // display: flex;
+              // background: #000;
+              // align-items: flex-start;
+              // justify-content: flex-start;
             }
           }
 
@@ -108,7 +118,7 @@
           height: auto;
 
           img {
-            height: 200px;
+            height: 300px;
           }
 
           &-description {
@@ -237,11 +247,12 @@
         flex-direction: column-reverse;
 
         &-l {
+          .h1 {
+          }
           h1 {
             font-size: 2rem;
-
             padding-left: 5rem;
-            text-align: center;
+            text-align: left;
           }
         }
       }

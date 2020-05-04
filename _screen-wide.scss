@@ -294,7 +294,6 @@
   &-how-it-works {
     background: $dark-light;
     background: transparentize($color: $dark, $amount: 0.1);
-
     position: relative;
 
     &::before {
@@ -384,6 +383,7 @@
           display: -ms-flexbox;
           display: -webkit-flex;
           display: flex;
+          flex-direction: column;
           -webkit-box-pack: center;
           -ms-flex-pack: center;
           -webkit-justify-content: center;
@@ -392,6 +392,34 @@
           -ms-flex-align: center;
           -webkit-align-items: center;
           align-items: center;
+
+          .text {
+            padding: 0 2rem;
+            border-radius: 2rem;
+            background: transparentize($color: $light, $amount: 0.9);
+            max-height: 100px;
+            height: 100px;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            width: 80%;
+
+            h3 {
+              font-size: 1rem;
+              font-family: $font-primary;
+              font-weight: 500;
+              padding-bottom: 0.5rem;
+              text-transform: capitalize;
+            }
+
+            p {
+              color: $primary-light;
+              font-size: 0.85rem !important;
+              font-weight: 300;
+            }
+          }
 
           img {
             width: 70%;
@@ -434,7 +462,7 @@
         .lead {
           padding: 0 1rem;
           padding-bottom: 1rem;
-          color: $dark;
+          color: $light;
         }
 
         .btn {
@@ -523,14 +551,14 @@
           color: lighten($color: $medium, $amount: 20);
           position: relative;
           letter-spacing: 1.2px;
-          font-weight: 300;
+          font-weight: 500;
           padding: 0 2rem 3rem 2rem;
           height: 75%;
           width: 100%;
 
           q {
             display: block;
-            font-size: 18px;
+            font-size: 14px;
             line-height: 1.25em;
             margin-bottom: 12px;
             quotes: "“" "”";
@@ -592,7 +620,7 @@
         grid-template-columns: 1fr 1.25fr;
         justify-content: center;
         align-items: flex-start;
-        height: 400px;
+        max-height: 400px;
         background: $primary;
         border-radius: 10px;
         overflow: hidden;
@@ -1154,6 +1182,12 @@
           #374750,
           #222c32
         );
+      }
+
+      a {
+        font-weight: 300;
+        font-size: 0.95rem;
+        color: lighten($color: $dark-light, $amount: 18);
       }
     }
   }

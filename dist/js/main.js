@@ -52,3 +52,23 @@ function myTeamSwiper(slidesPerView) {
     },
   });
 }
+
+// Smooth Scrolling
+// This code is jQuery so use the minified CDN in the html code
+$("#home-nav .menu a, #home-main-footer .useful-links  ul a").on(
+  "click",
+  function (event) {
+    if (this.hash !== "") {
+      event.preventDefault();
+
+      const hash = this.hash;
+
+      $("html, body").animate(
+        {
+          scrollTop: $(hash).offset().top - 10,
+        },
+        800
+      );
+    }
+  }
+);

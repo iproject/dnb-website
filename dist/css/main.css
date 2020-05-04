@@ -558,12 +558,53 @@ ul {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
+}
+
+#home-how-it-works .tutorials .swiper-slide .text {
+  padding: 0 2rem;
+  border-radius: 2rem;
+  background: rgba(241, 241, 241, 0.1);
+  max-height: 100px;
+  height: 100px;
+  margin-bottom: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 80%;
+}
+
+#home-how-it-works .tutorials .swiper-slide .text h3 {
+  font-size: 1rem;
+  font-family: "Fira Sans", sans-serif;
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  text-transform: capitalize;
+}
+
+#home-how-it-works .tutorials .swiper-slide .text p {
+  color: #66c2ff;
+  font-size: 0.85rem !important;
+  font-weight: 300;
 }
 
 #home-how-it-works .tutorials .swiper-slide img {
@@ -616,7 +657,7 @@ ul {
 #home-design .content-l .lead {
   padding: 0 1rem;
   padding-bottom: 1rem;
-  color: #374650;
+  color: #f1f1f1;
 }
 
 #home-design .content-l .btn {
@@ -727,7 +768,7 @@ ul {
   color: #f2f2f2;
   position: relative;
   letter-spacing: 1.2px;
-  font-weight: 300;
+  font-weight: 500;
   padding: 0 2rem 3rem 2rem;
   height: 75%;
   width: 100%;
@@ -735,7 +776,7 @@ ul {
 
 #home-testimonials .testimonials .item blockquote q {
   display: block;
-  font-size: 18px;
+  font-size: 14px;
   line-height: 1.25em;
   margin-bottom: 12px;
   quotes: "“" "”";
@@ -803,7 +844,7 @@ ul {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  height: 400px;
+  max-height: 400px;
   background: #007acc;
   border-radius: 10px;
   overflow: hidden;
@@ -1454,6 +1495,12 @@ ul {
   background: linear-gradient(to left, #222c32, #374750, #374750, #374750, #222c32);
 }
 
+#home-main-footer .copyright a {
+  font-weight: 300;
+  font-size: 0.95rem;
+  color: #698392;
+}
+
 @media (min-width: 770px) and (max-width: 1400px) {
   #home .section-title {
     font-size: 2rem;
@@ -1504,9 +1551,16 @@ ul {
     grid-column: 1/1;
     grid-gap: 0;
   }
+  #home-showcase .showcase-content-l .h1 {
+    display: none;
+  }
   #home-showcase .showcase-content-l .h1 h1:first-child {
     display: none;
     background: #000;
+    white-space: nowrap;
+  }
+  #home-showcase .showcase-content-l .h1 h1 {
+    padding-left: 1rem;
   }
   #home-showcase .showcase-content-l h1 {
     font-size: 3rem;
@@ -1592,7 +1646,7 @@ ul {
     height: auto;
   }
   #home-more-apps .items .item img {
-    height: 200px;
+    height: 300px;
   }
   #home-more-apps .items .item-description {
     text-align: center;
@@ -1730,7 +1784,7 @@ ul {
   #home-showcase .showcase-content-l h1 {
     font-size: 2rem;
     padding-left: 5rem;
-    text-align: center;
+    text-align: left;
   }
   #home-features .section-title {
     font-size: 2rem;
