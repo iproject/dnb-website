@@ -590,7 +590,7 @@ ul {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  width: 80%;
+  width: 100%;
 }
 
 #home-how-it-works .tutorials .swiper-slide .text h3 {
