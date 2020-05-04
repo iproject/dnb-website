@@ -295,7 +295,7 @@ ul {
   background: #1488cc;
   background: -webkit-gradient(linear, right top, left top, from(#005bb4), color-stop(50%, #1488cc), to(#66c2ff));
   background: linear-gradient(270deg, #005bb4 0%, #1488cc 50%, #66c2ff 100%);
-  padding-top: 15vh;
+  padding-top: 10vh;
 }
 
 #home-showcase .showcase-content {
@@ -308,8 +308,8 @@ ul {
 
 #home-showcase .showcase-content-l {
   -ms-grid-column: 3;
-  -ms-grid-column-span: 5;
-  grid-column: 3/8;
+  -ms-grid-column-span: 4;
+  grid-column: 3/7;
   -webkit-box-flex: 1;
       -ms-flex: 1;
           flex: 1;
@@ -328,7 +328,7 @@ ul {
       -ms-flex-pack: center;
           justify-content: center;
   color: #f1f1f1;
-  padding: 0 5rem;
+  padding-left: 10rem;
 }
 
 #home-showcase .showcase-content-l h1 {
@@ -336,7 +336,6 @@ ul {
   padding-bottom: 1rem;
   font-size: 3.5rem;
   font-family: "Fira Sans", sans-serif;
-  white-space: nowrap !important;
 }
 
 #home-showcase .showcase-content-l h1:nth-child(2) {
@@ -388,9 +387,9 @@ ul {
 }
 
 #home-showcase .showcase-content-r {
-  -ms-grid-column: 8;
-  -ms-grid-column-span: 3;
-  grid-column: 8/11;
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 4;
+  grid-column: 7/11;
   height: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -408,12 +407,12 @@ ul {
 #home-showcase .showcase-content-r img {
   max-height: 100%;
   max-width: 100%;
-  height: 80vh;
+  height: 100%;
   width: auto;
 }
 
 #home-features {
-  background: #374550;
+  background: #374650;
 }
 
 #home-features .container {
@@ -468,8 +467,113 @@ ul {
   color: #bfbfbf;
 }
 
+#home-how-it-works {
+  background: #43535d;
+  background: rgba(55, 70, 80, 0.9);
+  position: relative;
+}
+
+#home-how-it-works::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background: #374650 url("../assets/img/how-it-works-bg.jpg") no-repeat center center/cover;
+  z-index: -1;
+  -webkit-filter: grayscale(100%);
+          filter: grayscale(100%);
+}
+
+#home-how-it-works .section-title {
+  padding: 2rem 0rem 2rem 0rem;
+}
+
+#home-how-it-works .slideshow {
+  overflow: hidden;
+  padding: 0rem 0rem 5rem 0rem;
+}
+
+#home-how-it-works .tutorials {
+  height: 85vh;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  padding: 0rem 1.5rem;
+}
+
+#home-how-it-works .tutorials .swiper-container {
+  width: 100%;
+  height: 100%;
+}
+
+#home-how-it-works .tutorials .swiper-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 100%;
+}
+
+#home-how-it-works .tutorials .swiper-button-next, #home-how-it-works .tutorials .swiper-button-prev {
+  color: #bfbfbf !important;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  background: rgba(13, 13, 13, 0.5);
+  border: solid 2px #bfbfbf;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 2rem;
+}
+
+#home-how-it-works .tutorials .swiper-button-next::after, #home-how-it-works .tutorials .swiper-button-prev::after {
+  font-size: 2rem;
+}
+
+#home-how-it-works .tutorials .swiper-button-next:hover, #home-how-it-works .tutorials .swiper-button-next:focus, #home-how-it-works .tutorials .swiper-button-prev:hover, #home-how-it-works .tutorials .swiper-button-prev:focus {
+  outline: none;
+  border-color: #374650;
+  color: #374650 !important;
+  background: #007acc;
+}
+
+#home-how-it-works .tutorials .swiper-button-next {
+  margin-right: 0.75rem;
+}
+
+#home-how-it-works .tutorials .swiper-button-prev {
+  margin-left: 0.75rem;
+}
+
+#home-how-it-works .tutorials .swiper-pagination-bullet-active {
+  background-color: #007acc;
+}
+
+#home-how-it-works .tutorials .swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  padding: 3rem;
+  padding-bottom: 4.5rem;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+
+#home-how-it-works .tutorials .swiper-slide img {
+  width: 70%;
+}
+
 #home-design {
-  background: #43525d;
+  background: #1488cc;
+  background: -webkit-gradient(linear, right top, left top, from(#005bb4), color-stop(50%, #1488cc), to(#66c2ff));
+  background: linear-gradient(270deg, #005bb4 0%, #1488cc 50%, #66c2ff 100%);
 }
 
 #home-design .container {
@@ -510,9 +614,9 @@ ul {
 }
 
 #home-design .content-l .lead {
-  color: #bfbfbf;
   padding: 0 1rem;
   padding-bottom: 1rem;
+  color: #374650;
 }
 
 #home-design .content-l .btn {
@@ -523,9 +627,7 @@ ul {
   display: inline-block;
   padding: 0.75rem 2rem;
   font-size: 0.95rem;
-  background: #1488cc;
-  background: -webkit-gradient(linear, right top, left top, from(#005bb4), color-stop(50%, #1488cc), to(#66c2ff));
-  background: linear-gradient(270deg, #005bb4 0%, #1488cc 50%, #66c2ff 100%);
+  background: #43535d;
   color: #f1f1f1;
   border-radius: 25px;
 }
@@ -548,92 +650,6 @@ ul {
 
 #home-design .content-r img {
   width: 100%;
-}
-
-#home-how-it-works {
-  background: #1488cc;
-  background: -webkit-gradient(linear, right top, left top, from(#005bb4), color-stop(50%, #1488cc), to(#66c2ff));
-  background: linear-gradient(270deg, #005bb4 0%, #1488cc 50%, #66c2ff 100%);
-  padding: 5rem 0;
-}
-
-#home-how-it-works .section-title {
-  padding: 0rem 0rem 2rem 0rem;
-}
-
-#home-how-it-works .slideshow {
-  height: 85vh;
-  overflow: hidden;
-}
-
-#home-how-it-works .tutorials {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  padding: 0 3rem;
-}
-
-#home-how-it-works .tutorials .swiper-container {
-  width: 100%;
-  height: 100%;
-}
-
-#home-how-it-works .tutorials .swiper-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-}
-
-#home-how-it-works .tutorials .swiper-button-next, #home-how-it-works .tutorials .swiper-button-prev {
-  color: #007acc !important;
-  background-color: rgba(255, 255, 255, 0.2);
-  border-radius: 50%;
-  background: rgba(55, 70, 80, 0.5);
-  border: solid 2px #007acc;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  padding: 1rem 1.25rem;
-}
-
-#home-how-it-works .tutorials .swiper-button-next::after, #home-how-it-works .tutorials .swiper-button-prev::after {
-  font-size: 1rem;
-}
-
-#home-how-it-works .tutorials .swiper-button-next:hover, #home-how-it-works .tutorials .swiper-button-next:focus, #home-how-it-works .tutorials .swiper-button-prev:hover, #home-how-it-works .tutorials .swiper-button-prev:focus {
-  outline: none;
-  border-color: #374650;
-  color: #374650 !important;
-  background: #007acc;
-}
-
-#home-how-it-works .tutorials .swiper-button-next {
-  margin-right: -0.75rem;
-}
-
-#home-how-it-works .tutorials .swiper-button-prev {
-  margin-left: -0.75rem;
-}
-
-#home-how-it-works .tutorials .swiper-pagination-bullet-active {
-  background-color: #007acc;
-}
-
-#home-how-it-works .tutorials .swiper-slide {
-  text-align: center;
-  font-size: 18px;
-  padding: 3rem;
-  background: #43535d;
-  /* Center slide text vertically */
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
 }
 
 #home-testimonials {
@@ -1438,7 +1454,34 @@ ul {
   background: linear-gradient(to left, #222c32, #374750, #374750, #374750, #222c32);
 }
 
-@media screen and (max-width: 770px) {
+@media (min-width: 770px) and (max-width: 1400px) {
+  #home .section-title {
+    font-size: 2rem;
+  }
+  #home-showcase .showcase-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+  }
+  #home-showcase .showcase-content-l {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 5;
+    grid-column: 2/7;
+    padding: 0;
+  }
+  #home-showcase .showcase-content-r {
+    -ms-grid-column: 7;
+    -ms-grid-column-span: 5;
+    grid-column: 7/12;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
+@media screen and (max-width: 769px) {
   #home .section-title {
     font-size: 2rem;
   }
@@ -1781,15 +1824,7 @@ ul {
 
 @media screen and (max-height: 1024px) {
   #home-showcase .showcase-content-l {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 6;
-    grid-column: 2/8;
     padding: 0;
-  }
-  #home-showcase .showcase-content-r {
-    -ms-grid-column: 8;
-    -ms-grid-column-span: 4;
-    grid-column: 8/12;
   }
 }
 /*# sourceMappingURL=main.css.map */

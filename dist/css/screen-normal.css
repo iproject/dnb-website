@@ -1,0 +1,26 @@
+@media screen and (max-width: 1400px) {
+  #home .section-title {
+    font-size: 2rem;
+  }
+  #home-showcase .showcase-content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+  }
+  #home-showcase .showcase-content-l {
+    -ms-grid-column: 1 !important;
+    -ms-grid-column-span: 5 !important;
+    grid-column: 1/6 !important;
+  }
+  #home-showcase .showcase-content-r {
+    -ms-grid-column: 6;
+    -ms-grid-column-span: 3;
+    grid-column: 6/9;
+    text-align: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+/*# sourceMappingURL=screen-normal.css.map */

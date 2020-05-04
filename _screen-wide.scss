@@ -155,7 +155,7 @@
     background: $gradient-primary-bg;
     background: $gradient-primary-webkit;
     background: $gradient-primary;
-    padding-top: 15vh;
+    padding-top: 10vh;
 
     .showcase-content {
       display: grid;
@@ -163,7 +163,7 @@
       height: 100%;
 
       &-l {
-        grid-column: 3/8;
+        grid-column: 3/7;
         flex: 1;
         height: 100%;
         display: flex;
@@ -171,14 +171,14 @@
         align-items: flex-start;
         justify-content: center;
         color: $light;
-        padding: 0 5rem;
+        padding-left: 10rem;
 
         h1 {
           color: $light;
           padding-bottom: 1rem;
           font-size: 3.5rem;
           font-family: $font-primary;
-          white-space: nowrap !important;
+          // white-space: nowrap !important;
 
           &:nth-child(2) {
             padding-bottom: 2rem;
@@ -228,7 +228,7 @@
       }
 
       &-r {
-        grid-column: 8/11;
+        grid-column: 7/11;
         height: 100%;
         display: flex;
         align-items: center;
@@ -239,7 +239,7 @@
         img {
           max-height: 100%;
           max-width: 100%;
-          height: 80vh;
+          height: 100%;
           width: auto;
         }
       }
@@ -247,7 +247,7 @@
   }
 
   &-features {
-    background: #374550;
+    background: $dark;
     .container {
       padding-bottom: 4rem;
     }
@@ -291,8 +291,120 @@
     }
   }
 
+  &-how-it-works {
+    background: $dark-light;
+    background: transparentize($color: $dark, $amount: 0.1);
+
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      background: $dark url("../assets/img/how-it-works-bg.jpg") no-repeat
+        center center/ cover;
+      z-index: -1;
+      filter: grayscale(100%);
+    }
+
+    .section-title {
+      padding: 2rem 0rem 2rem 0rem;
+    }
+
+    .slideshow {
+      overflow: hidden;
+      padding: 0rem 0rem 5rem 0rem;
+    }
+
+    .tutorials {
+      height: 85vh;
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      padding: 0rem 1.5rem;
+
+      .swiper {
+        &-container {
+          width: 100%;
+          height: 100%;
+        }
+
+        &-wrapper {
+          display: flex;
+          height: 100%;
+        }
+
+        &-button-next,
+        &-button-prev {
+          color: $medium !important;
+          background-color: transparentize($color: $white, $amount: 0.8);
+          border-radius: 50%;
+          background: transparentize($color: $black, $amount: 0.5);
+          border: solid 2px $medium;
+          transition: 0.5s;
+          padding: 2rem;
+
+          &::after {
+            font-size: 2rem;
+          }
+
+          &:hover,
+          &:focus {
+            outline: none;
+            border-color: $dark;
+            color: $dark !important;
+            background: $primary;
+          }
+        }
+
+        &-button-next {
+          margin-right: 0.75rem;
+        }
+
+        &-button-prev {
+          margin-left: 0.75rem;
+        }
+
+        &-pagination-bullet-active {
+          background-color: $primary;
+        }
+
+        &-slide {
+          text-align: center;
+          font-size: 18px;
+          padding: 3rem;
+          padding-bottom: 4.5rem;
+          // background: $dark-light;
+
+          /* Center slide text vertically */
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: -webkit-flex;
+          display: flex;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          -webkit-justify-content: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          -webkit-align-items: center;
+          align-items: center;
+
+          img {
+            width: 70%;
+          }
+        }
+      }
+    }
+  }
+
   &-design {
-    background: #43525d;
+    background: $gradient-primary-bg;
+    background: $gradient-primary-webkit;
+    background: $gradient-primary;
 
     .container {
       display: grid;
@@ -320,9 +432,9 @@
         }
 
         .lead {
-          color: $medium;
           padding: 0 1rem;
           padding-bottom: 1rem;
+          color: $dark;
         }
 
         .btn {
@@ -331,9 +443,7 @@
             display: inline-block;
             padding: 0.75rem 2rem;
             font-size: 0.95rem;
-            background: $gradient-primary-bg;
-            background: $gradient-primary-webkit;
-            background: $gradient-primary;
+            background: $dark-light;
             color: $light;
             border-radius: 25px;
           }
@@ -349,97 +459,6 @@
 
         img {
           width: 100%;
-        }
-      }
-    }
-  }
-
-  &-how-it-works {
-    background: $gradient-primary-bg;
-    background: $gradient-primary-webkit;
-    background: $gradient-primary;
-    padding: 5rem 0;
-
-    .section-title {
-      padding: 0rem 0rem 2rem 0rem;
-    }
-
-    .slideshow {
-      height: 85vh;
-      overflow: hidden;
-    }
-
-    .tutorials {
-      width: 100%;
-      height: 100%;
-      overflow: hidden;
-      padding: 0 3rem;
-
-      .swiper {
-        &-container {
-          width: 100%;
-          height: 100%;
-        }
-
-        &-wrapper {
-          display: flex;
-          height: 100%;
-        }
-
-        &-button-next,
-        &-button-prev {
-          color: $primary !important;
-          background-color: transparentize($color: $white, $amount: 0.8);
-          border-radius: 50%;
-          background: transparentize($color: $dark, $amount: 0.5);
-          border: solid 2px $primary;
-          transition: 0.5s;
-          padding: 1rem 1.25rem;
-
-          &::after {
-            font-size: 1rem;
-          }
-
-          &:hover,
-          &:focus {
-            outline: none;
-            border-color: $dark;
-            color: $dark !important;
-            background: $primary;
-          }
-        }
-
-        &-button-next {
-          margin-right: -0.75rem;
-        }
-
-        &-button-prev {
-          margin-left: -0.75rem;
-        }
-
-        &-pagination-bullet-active {
-          background-color: $primary;
-        }
-
-        &-slide {
-          text-align: center;
-          font-size: 18px;
-          padding: 3rem;
-          background: $dark-light;
-
-          /* Center slide text vertically */
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: -webkit-flex;
-          display: flex;
-          -webkit-box-pack: center;
-          -ms-flex-pack: center;
-          -webkit-justify-content: center;
-          justify-content: center;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          -webkit-align-items: center;
-          align-items: center;
         }
       }
     }
