@@ -1,5 +1,5 @@
 // Tablets
-@media screen and (max-width: "769px") {
+@media screen and (max-width: '769px') {
   #home {
     .section-title {
       font-size: 2rem;
@@ -29,10 +29,6 @@
 
             h1 {
               padding-left: 1rem;
-              // display: flex;
-              // background: #000;
-              // align-items: flex-start;
-              // justify-content: flex-start;
             }
           }
 
@@ -232,10 +228,21 @@
 }
 
 // Smartphones
-@media screen and (max-width: "500px") {
+@media screen and (max-width: '500px') {
   #home {
     .section-title {
       font-size: 2rem !important;
+    }
+
+    &-nav {
+      ul.menu {
+        right: -350px;
+        padding: 15vh 20px 20px 10px;
+      }
+
+      li a {
+        padding: 0.5rem 1rem !important;
+      }
     }
 
     &-showcase {
@@ -265,6 +272,34 @@
 
       .items {
         grid-template-columns: 1fr;
+      }
+    }
+
+    &-how-it-works {
+      .section-title {
+        font-size: 2.5rem;
+      }
+      .tutorials {
+        .swiper {
+          &-slide {
+            padding: 0rem;
+            padding-bottom: 2rem;
+          }
+
+          &-button-next,
+          &-button-prev {
+            padding: 1.5rem;
+            margin-left: -0.5rem;
+          }
+
+          &-button-next {
+            margin-right: -0.5rem;
+          }
+
+          &-pagination {
+            margin-bottom: -1rem;
+          }
+        }
       }
     }
 
@@ -369,8 +404,28 @@
 
       .newsletter {
         form {
-          input[type="submit"] {
+          input[type='submit'] {
             font-size: 0.5rem !important;
+          }
+        }
+      }
+    }
+
+    &-terms-and-policy {
+      .container {
+        width: 330px;
+      }
+
+      .modal {
+        .modal-content {
+          .dates {
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+          }
+
+          p {
+            font-size: 0.9rem;
           }
         }
       }

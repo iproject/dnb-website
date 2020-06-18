@@ -7,7 +7,7 @@
     right: 5vw;
     display: flex;
     align-items: flex-end;
-    z-index: 2;
+    z-index: 10;
 
     .nav-wrapper {
       width: 100%;
@@ -93,7 +93,7 @@
       background: darken($color: $dark, $amount: 5);
       position: absolute;
       top: 0px;
-      right: -320px;
+      right: -450px;
       padding: 15vh 40px 30px 0;
       border-radius: 0 0 15px 15px;
       transition: 0.5s cubic-bezier(0.77, 0.2, 0.05, 1);
@@ -297,13 +297,13 @@
     position: relative;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
-      background: $dark url("../assets/img/how-it-works-bg.jpg") no-repeat
+      background: $dark url('../assets/img/how-it-works-bg.jpg') no-repeat
         center center/ cover;
       z-index: -1;
       filter: grayscale(100%);
@@ -498,13 +498,13 @@
     padding-bottom: 8rem;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
-      background: $dark url("../assets/img/testimonial-bg.jpg") no-repeat center
+      background: $dark url('../assets/img/testimonial-bg.jpg') no-repeat center
         center/ cover;
       z-index: -1;
       filter: grayscale(100%);
@@ -561,14 +561,14 @@
             font-size: 14px;
             line-height: 1.25em;
             margin-bottom: 12px;
-            quotes: "“" "”";
+            quotes: '“' '”';
             margin-left: 2rem;
             color: $medium;
 
             &::before {
               color: $primary-light;
               content: open-quote;
-              font-family: Georgia, "Times New Roman", Times, serif;
+              font-family: Georgia, 'Times New Roman', Times, serif;
               font-size: 5rem;
               font-weight: bold;
               line-height: 4rem;
@@ -720,13 +720,13 @@
     padding-bottom: 10rem;
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       top: 0;
       left: 0;
       height: 100%;
       width: 100%;
-      background: $primary-light url("../assets/img/iproject-team.png")
+      background: $primary-light url('../assets/img/iproject-team.png')
         no-repeat center center/cover;
       z-index: -1;
       filter: grayscale(100%);
@@ -870,7 +870,7 @@
         font-family: $font-primary;
       }
 
-      input[type="submit"] {
+      input[type='submit'] {
         background: $dark-light;
         color: $light;
         text-transform: uppercase;
@@ -1126,7 +1126,7 @@
           }
         }
 
-        input[type="email"] {
+        input[type='email'] {
           width: 65%;
           padding: 0 0.5rem;
           color: $dark;
@@ -1135,7 +1135,7 @@
           letter-spacing: 1.2px;
         }
 
-        input[type="submit"] {
+        input[type='submit'] {
           width: 25%;
           padding: 0 0.7rem;
           color: $light;
@@ -1168,7 +1168,7 @@
 
       // Gradient line as top border
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         top: 0;
         left: 0;
@@ -1188,6 +1188,126 @@
         font-weight: 300;
         font-size: 0.95rem;
         color: lighten($color: $dark-light, $amount: 18);
+      }
+    }
+  }
+
+  &-terms-and-policy {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: #000000a9;
+    z-index: 1000;
+
+    .container {
+      position: relative;
+      width: 600px;
+      height: 100vh;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    .modal {
+      background: #fff;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-60%);
+      opacity: 0;
+      height: 90vh;
+      border-radius: 5px;
+      color: $dark;
+      display: grid;
+      grid-template-rows: 60px auto 50px;
+      transition: opacity 4.5s ease-in;
+
+      // opacity: 1;
+      // transform: translateY(-50%);
+
+      &.shown {
+        opacity: 1;
+        transition: 0.5s;
+        transform: translateY(-50%);
+      }
+
+      .header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 1.5rem;
+        -webkit-box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.19);
+        -moz-box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.19);
+        box-shadow: 0px 4px 5px -1px rgba(0, 0, 0, 0.19);
+
+        .modal-title {
+          font-weight: 500;
+          font-size: 1.5rem;
+          color: $dark;
+        }
+      }
+
+      .modal-content {
+        padding: 1rem 1.5rem 0.5rem;
+        overflow: auto;
+
+        .dates {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          justify-content: space-between;
+          font-size: 0.8rem;
+
+          span {
+            background: $light;
+            border-radius: 5px;
+            padding: 0.35rem 0.5rem;
+            margin-bottom: 0.25rem;
+          }
+        }
+
+        h3 {
+          color: lighten($color: $dark, $amount: 10);
+          font-size: 1rem;
+          padding: 1rem 0 0.5rem;
+        }
+
+        p {
+          color: $dark-light;
+        }
+      }
+
+      .modal-actions {
+        height: 50px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 1.5rem;
+        -webkit-box-shadow: 0px -4px 5px -1px rgba(0, 0, 0, 0.1);
+        -moz-box-shadow: 0px -4px 5px -1px rgba(0, 0, 0, 0.1);
+        box-shadow: 0px -4px 5px -1px rgba(0, 0, 0, 0.1);
+
+        button {
+          padding: 0.5rem 1rem;
+          border: none;
+          border-radius: 5px;
+          background: tomato;
+          color: $light;
+          font-size: 1rem;
+          font-weight: 500;
+          transition: 0.5s;
+
+          &:active,
+          &:focus {
+            outline: none;
+            border: none;
+          }
+
+          &:hover {
+            background: rgb(189, 68, 46);
+          }
+        }
       }
     }
   }
